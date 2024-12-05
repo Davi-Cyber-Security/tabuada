@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.center-caracteres{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    gap: 8px;
+    color: rgb(255, 187, 0);
+}
+
+.numero{
+    display: inline;
+    padding: 5px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.botao{
+    padding: 5px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px){
+    .center-caracteres{
+        padding: 8px;
+    }
+    .numero{
+        max-width: 100%;
+    }
+    .botao{
+        max-width: 100%;
+    }
+}
+.resultado{
+    font-size: 25px;
+}
