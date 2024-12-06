@@ -6,17 +6,38 @@ const dia = document.getElementById("dia")
 
 
 // Verificação de Horário
-const horario = new Date().getHours;
+const horario = new Date().getHours();
 const horarioString = horario.toString();
- if(horario >= 18){
+const ongs = Number(horarioString);
+const manha = "06";
+const Tomorrow = Number(manha)
+ if(ongs >= 18){
     dia.innerText = "Boa noite!"
-} else if (horario >= "12"){
+} else if (ongs >= 12){
     dia.innerText = "Boa tarde!"
-} else if(horario >= "00"){
-    dia.innerText = "Boa madrugada!"
-} else if(horario >= "06"){
+} else if(horario >= Tomorrow){
     dia.innerText = "Bom dia :)"
+} else{
+    dia.innerText = "Boa madrugada!"
 }
+
+// Adicionando horas em tempo real
+
+function Tempo_Real (){
+    const data = new Date();
+    const Tempo = data.toLocaleString("pt-BR", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    })
+    document.getElementById("horas").innerHTML = Tempo;
+}
+
+Tempo_Real();
+
+setInterval(function(){
+    Tempo_Real();
+}, 1000);
 
 
 // function verificando (){
